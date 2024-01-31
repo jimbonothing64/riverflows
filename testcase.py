@@ -32,7 +32,7 @@ def test_case(filename, days=None):
 
 
 def main():
-    test_case('dst/Riverflow_AvonOtakaroRiver_GloucesterStreetBridge.csv', [1])
+    test_case('dst/Riverflow_AvonOtakaroRiver_GloucesterStreetBridge.csv', [7])
 
 
 main()

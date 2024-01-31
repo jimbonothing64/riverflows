@@ -22,10 +22,11 @@ def convert_file(filename, suffix="", exclude=None):
                 time, afternoon = time.split(" ")
                 afternoon = True if afternoon == "PM" else False
                 hour, _ = time.split(":", maxsplit=1)
-                if afternoon:
-                    hour = int(hour) + 12
+
                 if not afternoon and hour == "12":
                     hour = 0
+                if afternoon and not hour == "12":
+                    hour = int(hour) + 12
                 hour = f"{int(hour):02d}"
                 outline = f"{site_no},{day + hour},{flowrate}\n"
                 outfile.write(outline)
